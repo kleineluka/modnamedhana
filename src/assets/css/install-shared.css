@@ -1,0 +1,74 @@
+/* Centered Text */
+.center-text {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #6e4826;
+}
+
+/* Centered Buttons */
+.center-button-on {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #6ed5a4;
+    background-color: #6e4826;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.center-button-off {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #6ed5a4;
+    background-color: #b74a53;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Header */
+.header {
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+.header-text {
+    font-weight: bold;
+    font-size: 1.35em;
+    color: #432b16;
+    padding-top: 5px;
+}
+
+.header-right {
+    padding-right: 10px;
+}
+
+.header-button {
+    color: #6ed5a4;
+    background-color: #6e4826;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}

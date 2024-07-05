@@ -1,0 +1,79 @@
+/* Install Type Selection */
+.install-type-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.install-type-container span {
+    margin-right: 10px;
+    font-size: 1.3em;
+    color: #6e4826;
+}
+
+.install-type-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #6ed5a4;
+    background-color: #6e4826;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.install-type-button.selected {
+    background-color: #a67c52;
+    color: #fff;
+}
+
+.install-type-button:last-child {
+    margin-right: 0;
+}
+
+.install-type-button:hover {
+    background-color: #875e3a;
+}
+
+/* Fancy Button Ooo */
+.install-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #6ed5a4;
+    background-color: #6e4826;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+}
+
+.install-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0) 25%,
+            rgba(255, 255, 255, 0.5) 50%,
+            rgba(255, 255, 255, 0) 75%);
+    transition: left 0.3s ease;
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) translateY(-100%);
+    }
+
+    50% {
+        transform: translateX(100%) translateY(100%);
+    }
+
+    100% {
+        transform: translateX(100%) translateY(100%);
+    }
+}

@@ -1,0 +1,38 @@
+/* Image */
+.center-image {
+  max-width: 100px;
+  margin-bottom: 5px;
+  margin-top: -20px;
+}
+
+/* Start Text */
+.center-text {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #6e4826;
+}
+
+/* List */
+.center-list {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  color: #432b16;
+}
+
+.center-list li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Button */
+.center-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #6ed5a4;
+  background-color: #6e4826;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
