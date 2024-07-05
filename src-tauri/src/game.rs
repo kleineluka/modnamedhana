@@ -4,7 +4,7 @@ use std::path::Path;
 // store the file path for later
 static mut FILE_PATH: Option<String> = None;
 
-
+// make sure that the path selected IS the game path
 #[tauri::command]
 pub fn verify_path(file_path: &str) -> bool {
     // store the file path (bleh.. unsafe)

@@ -3,6 +3,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 // modules
+mod utils;
 mod commands; 
 mod game;
 
@@ -10,9 +11,15 @@ mod game;
 fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![
+            utils::hash_check,
+            utils::write_text,
+            utils::copy_file,
+            utils::move_file,
+            utils::create_path,
             commands::navigate, 
             commands::folderwalk,
-            game::verify_path])
+            game::verify_path,
+            game::path_space])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
