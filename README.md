@@ -3,7 +3,7 @@
 ## Mod Named Hana
 A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add Hana content!
 
-[Features 🥹](#features) • [Install 🪄](#install) • [Guides & FAQ 😖](#guides-&-faq) • [Contribute 📝](#contribute) • [Credits 🎉](#credits) • [Tech Stack ⚒️](#tech-stack) • [Licenses 🤓](#license)
+[Features 🥹](#features) • [Install 🪄](#install) • [Guides & FAQ 😖](#guides-&-faq) • [Contribute 📝](#contribute) • [Tech Stack ⚒️](#tech-stack) • [Credits 🎉](#credits) • [Licenses 🤓](#license)
 
 [Straight to Downloads 🌈](https://www.github.com/kleineluka/modnamedhana) • [View Changelog 🍩](https://www.github.com/kleineluka/modnamedhana)
 
@@ -24,7 +24,7 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 
 ## Tech Stack ⚒️
 - [Rust](https://www.rust-lang.org/) is the installer's back-end. Why? It's lightweight, cross-platform, and easily redistributable... ~~and I needed an excuse to learn it~~.
-- [Tauri](https://tauri.app/) is the installer's front-end, for delivering that Electron experience without the bloat. This means that **Node** is the package manager used here!
+- [Tauri](https://tauri.app/) is the installer's front-end, for delivering an Electron experience without the bloat. This means that **Node** is the (other) package manager used here!
 - [RenPy](https://www.renpy.org/) is the game engine for Repurpose, soo the mod is written in its scripting language.
 
 > [!TIP]

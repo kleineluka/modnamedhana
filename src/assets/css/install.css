@@ -39,7 +39,7 @@
 /* Fancy Button Ooo */
 .install-button {
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 1.3em;
     color: #6ed5a4;
     background-color: #6e4826;
     border: none;
@@ -76,4 +76,45 @@
     100% {
         transform: translateX(100%) translateY(100%);
     }
+}
+
+/* Installing Log Styles */
+.log-container {
+    text-align: left;
+}
+
+.log-title {
+    font-size: 2em;
+    color: #6e4826;
+}
+
+.log-subheader {
+    font-size: 1.2em;
+    color: #6e4826;
+    margin-top: -20px;
+}
+
+.log-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.list-item {
+    font-size: 1.1em;
+    color: #432b16;
+    margin-bottom: 5px;
+    padding: 5px 0;
+}
+
+.log-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: #6ed5a4;
+    background-color: #6e4826;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }

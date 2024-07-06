@@ -1,7 +1,11 @@
+// imports
+use std::fs;
 use std::fs::File;
 use std::io::Read;
 use std::io::Write;
+use std::path::{Path, PathBuf};
 use sha2::{Digest, Sha256};
+use sysinfo::Disks;
 
 // compare sha-2 against two files
 #[tauri::command]
@@ -67,24 +71,25 @@ pub fn move_file(from: String, to: String) -> Result<(), String> {
 // create a folder
 #[tauri::command]
 pub fn create_path(path: String) -> Result<(), String> {
-    // create the folder
-    if let Err(e) = std::fs::create_dir_all(&path) {
+    let path_buf = PathBuf::from(path);
+    if let Err(e) = fs::create_dir_all(&path_buf) {
         return Err(format!("Failed to create folder: {}", e));
     }
-    // success (?)
     Ok(())
 }
 
-// take in a path and a required size, and then return true/false if the path has enough space
+// see if enough disk space exists
 #[tauri::command]
-pub fn path_space(file_path: &str, required_space: u64) -> bool {
-    // get the path
-    let path = Path::new(file_path);
-    // get the space
-    let space = match path.metadata() {
-        Ok(meta) => meta.len(),
-        Err(_) => 0,
-    };
-    // return if it has enough space
-    space >= required_space
+pub fn enough_space(path: &str, required_space: u64) -> bool {
+    let disks = Disks::new_with_refreshed_list();
+    for disk in disks.list() {
+        if let Some(mount_point) = disk.mount_point().to_str() {
+            if path.starts_with(mount_point) {
+                if disk.available_space() >= required_space {
+                    return true;
+                } 
+            }
+        }
+    }
+    false
 }

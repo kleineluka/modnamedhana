@@ -26,13 +26,23 @@
     </div>
   </header>
   <!-- center -->
-  <div class="container wow fadeIn">
+  <div id="prompt-div" class="container wow fadeIn">
     <div class="install-type-container">
       <span>Install Type:</span>
       <button id="copy-game" class="install-type-button selected">Copy Game</button>
       <button id="patch-game" class="install-type-button">Patch Game</button>
     </div>
-    <button class="install-button warning-button hvr-pulse-grow" data-action="install">Install!</button>
+    <button id="install-button" class="install-button warning-button hvr-pulse-grow">Install!</button>
+  </div>
+  <div id="log-div" class="container wow fadeIn" style="display: none;">
+    <div class="log-container">
+      <h1 id="log-title" class="log-title"></h1>
+      <p class="log-subheader">pwease sit tight uaua...</p>
+      <ul id="log-list" class="log-list">
+        <!-- to be inserted by back-end :D -->
+      </ul>
+    </div>
+    <button class="navigate-button log-button hvr-pulse-grow" data-page="select.html" style="display: none;">Proceed</button>
   </div>
   <!-- footer -->
   <div class="wow fadeIn">

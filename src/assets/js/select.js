@@ -11,7 +11,6 @@ document.getElementById('browse-button').addEventListener('click', (event) => {
 // listen to put the selected data back in the path
 document.addEventListener('DOMContentLoaded', () => {
     listen('selected-folder', (event) => {
-        console.log('Selected folder:', event.payload);
         document.querySelector('.file-path-input').value = event.payload;
     });
 });

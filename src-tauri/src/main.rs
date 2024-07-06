@@ -16,10 +16,11 @@ fn main() {
             utils::copy_file,
             utils::move_file,
             utils::create_path,
+            utils::enough_space,
             commands::navigate, 
             commands::folderwalk,
             game::verify_path,
-            game::path_space])
+            game::install_mod])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
