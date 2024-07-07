@@ -42,7 +42,7 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 .. need help! please reach out :) discord: `kleinezoey`
 
 ### Mod Development
-- [RenPy](https://www.renpy.org/) is the game engine for Repurpose, sooo the mod is written in its scripting language. You can find more information on how to mod Repurpose [here](https://www.github.com/kleineluka/modnamedhana/knowledge/Modding Repurpose.md).
+- [RenPy](https://www.renpy.org/) is the game engine for Repurpose, sooo the mod is written in its scripting language. You can find more information on how to mod Repurpose [here](https://github.com/kleineluka/modnamedhana/blob/main/knowledge/Modding%20Repurpose.md).
 
 > [!TIP]
 > You can find the [mod content in /src-tauri/renpy/](https://github.com/kleineluka/modnamedhana/tree/main/src-tauri/renpy)!
