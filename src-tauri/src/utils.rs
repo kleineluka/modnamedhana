@@ -3,7 +3,7 @@ use std::fs;
 use std::fs::File;
 use std::io::Read;
 use std::io::Write;
-use std::path::{Path, PathBuf};
+use std::path::{PathBuf};
 use sha2::{Digest, Sha256};
 use sysinfo::Disks;
 

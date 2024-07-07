@@ -73,7 +73,7 @@ pub fn install_mod(window: Window, install_type: String) {
                 Ok(_) => {
                     let _ = window.emit("log-update", "Successfully created directory...");
                 }
-                Err(e) => {
+                Err(_e) => {
                     let _ = window.emit("update-error", "create-dir");
                     return;
                 }
