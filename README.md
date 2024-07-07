@@ -16,7 +16,7 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 
 <div align="center">
 
-[Features 🥹](#features) • [Install 🪄](#install) • [Guides & FAQ 😖](#guides-&-faq) • [Contribute 📝](#contribute) • [Credits & Licenses 🎉](#credits-&licenses)
+[Features 🥹](#features-) • [Install 🪄](#install-) • [Guides & FAQ 😖](#guides--faq-) • [Contribute 📝](#contribute-) • [Credits & Licenses 🎉](#credits--licenses-)
 
 </div>
 
@@ -27,21 +27,14 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 - Lots of words! ~~word count coming soon..ish..~~
 - Open-source and community-driven! You are free to help.. please help..
 
-<br>
-
 # Install 🪄
 - Coming soon! Please refer to the current status at the top of the page.
 - You have two options to install:
   - Installer **(Suggested)**: Automatically create a new game copy with the mod or patch your existing.
   - Manual: Download the mod content and replace/move files yourself.
 
-
-<br>
-
 # Guides & FAQ 😖
 - Walk through coming soon.
-
-<br>
 
 # Contribute 📝
 
@@ -49,7 +42,7 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 .. need help! please reach out :) discord: `kleinezoey`
 
 ### Mod Development
-- [RenPy](https://www.renpy.org/) is the game engine for Repurpose, sooo the mod is written in its scripting language. More information on how to modify the game will be added soon!
+- [RenPy](https://www.renpy.org/) is the game engine for Repurpose, sooo the mod is written in its scripting language. You can find more information on how to mod Repurpose [here](https://www.github.com/kleineluka/modnamedhana/knowledge/Modding Repurpose.md).
 
 > [!TIP]
 > You can find the [mod content in /src-tauri/renpy/](https://github.com/kleineluka/modnamedhana/tree/main/src-tauri/renpy)!
@@ -64,8 +57,6 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 
 ### Bugs or Feedback
 - For now, please either [open an issue on Github](https://github.com/kleineluka/modnamedhana/issues) or reach out to me on Discord at `kleinezoey`!
-
-<br>
 
 # Credits & Licenses 🎉 
 - **Mod Named Hana** is licensed under the [MIT License](https://github.com/kleineluka/modnamedhana/blob/main/LICENSE).
