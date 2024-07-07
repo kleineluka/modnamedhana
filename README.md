@@ -38,15 +38,24 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 # Contribute 📝
 
 ### Writing or Art
-.. need help! please reach out :) discord: kleinezoey
+.. need help! please reach out :) discord: `kleinezoey`
 
-### Development (Installer or Mod)
-- [Rust](https://www.rust-lang.org/) is the **installer's** back-end. Why? It's lightweight, cross-platform, and easily redistributable... ~~and I needed an excuse to learn it~~.
-- [Tauri](https://tauri.app/) is the **installer's** front-end, for delivering an Electron experience without the bloat. This means that **Node** is the (other) package manager used here!
-- [RenPy](https://www.renpy.org/) is the game engine for Repurpose, soo the **mod is written in its scripting language**.
+### Mod Development
+- [RenPy](https://www.renpy.org/) is the game engine for Repurpose, sooo the **mod is written in its scripting language**.
 
 > [!TIP]
-> You can find the the [back-end in /src-tauri/](https://github.com/kleineluka/modnamedhana/tree/main/src-tauri/src), the [front-end in /src/](https://github.com/kleineluka/modnamedhana/tree/main/src), and the [mod content in /src-tauri/renpy/](https://github.com/kleineluka/modnamedhana/tree/main/src-tauri/renpy)!
+> You can find the [mod content in /src-tauri/renpy/](https://github.com/kleineluka/modnamedhana/tree/main/src-tauri/renpy)!
+
+### Installer Development
+- [Rust](https://www.rust-lang.org/) is the **installer's** back-end. Why? It's lightweight, cross-platform, and easily redistributable... ~~and I needed an excuse to learn it~~.
+- [Tauri](https://tauri.app/) is the **installer's** front-end, for delivering an Electron experience without the bloat. This means that **Node** is the (other) package manager used here!
+
+> [!TIP]
+> You can find the the [back-end in /src-tauri/](https://github.com/kleineluka/modnamedhana/tree/main/src-tauri/src) and the [front-end in /src/](https://github.com/kleineluka/modnamedhana/tree/main/src).
+
+
+### Bugs or Feedback
+- For now, please either [open an issue on Github](https://github.com/kleineluka/modnamedhana/issues) or reach out to me on Discord at `kleinezoey`!
 
 More information on how to modify the game will be added soon!
 
