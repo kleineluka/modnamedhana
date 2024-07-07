@@ -2,8 +2,6 @@
 
 <img src="https://github.com/kleineluka/modnamedhana/blob/main/src/assets/img/hana.png" width="100" height="100">
 
-<br>
-
 # Mod Named Hana
 A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add Hana content!
 
@@ -15,22 +13,28 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 </div>
 
 ---
-<br>
+
 <div align="center">
 
 [Features 🥹](#features) • [Install 🪄](#install) • [Guides & FAQ 😖](#guides-&-faq) • [Contribute 📝](#contribute) • [Credits & Licenses 🎉](#credits-&licenses)
 
 </div>
 
-<br>
-
 # Features 🥹
-- Coming soon! Please refer to the current status at the top of the page.
+- Play a fan-made path dedicated to ~~Annoying Girl~~ Hana!
+- Multiple ways to engage the path, and different endings for the path.
+- New stats to manage! It's not just about building friendship, but also raising Hana's trust and self-esteem.
+- Lots of words! ~~word count coming soon..ish..~~
+- Open-source and community-driven! You are free to help.. please help..
 
 <br>
 
 # Install 🪄
 - Coming soon! Please refer to the current status at the top of the page.
+- You have two options to install:
+  - Installer **(Suggested)**: Automatically create a new game copy with the mod or patch your existing.
+  - Manual: Download the mod content and replace/move files yourself.
+
 
 <br>
 
