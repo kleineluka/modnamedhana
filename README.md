@@ -1,5 +1,9 @@
 <div align="center">
 
+<img src="https://github.com/kleineluka/modnamedhana/blob/main/src/assets/img/hana.png" width="100" height="100">
+
+<br>
+
 # Mod Named Hana
 A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add Hana content!
 
@@ -51,7 +55,7 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 - [Tauri](https://tauri.app/) is the installer's front-end, for delivering an Electron experience without the bloat. This means that **Node** is the (other) package manager used here!
 
 > [!TIP]
-> You can find the the [back-end in /src-tauri/](https://github.com/kleineluka/modnamedhana/tree/main/src-tauri/src) and the [front-end in /src/](https://github.com/kleineluka/modnamedhana/tree/main/src).
+> You can find the the [back-end in /src-tauri/](https://github.com/kleineluka/modnamedhana/tree/main/src-tauri/src) and the [front-end in /src/](https://github.com/kleineluka/modnamedhana/tree/main/src)!
 
 
 ### Bugs or Feedback
