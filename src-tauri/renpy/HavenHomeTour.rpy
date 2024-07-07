@@ -10,4 +10,7 @@ label HanaDivert:
         "Wait.. who says you get the biggest cabin!?":
             jump HanaRouteCh1P1
         "Um, okay then. It's all yours.":
-            pass
+            jump SkipHana
+
+# (Insert @ 815) Edited by Mod Named Hana
+label SkipHana:
