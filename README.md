@@ -8,7 +8,7 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 
 [Straight to Downloads 🌈](https://www.github.com/kleineluka/modnamedhana) • [View Changelog 🍩](https://www.github.com/kleineluka/modnamedhana)
 
-**Current Status:** 🚧 In Development! 🚧 ~~(.. and needing help art or writing)~~
+**Current Status:** 🚧 In Development! 🚧 ~~(.. and needing help with art or writing)~~
 
 </div>
 
