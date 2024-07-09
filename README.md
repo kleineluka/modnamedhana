@@ -8,7 +8,7 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 
 [Straight to Downloads 🌈](https://www.github.com/kleineluka/modnamedhana) • [View Changelog 🍩](https://www.github.com/kleineluka/modnamedhana)
 
-**Current Status:** 🚧 In Development! 🚧 ~~(.. and needing help writing)~~
+**Current Status:** 🚧 In Development! 🚧 ~~(.. and needing help art or writing)~~
 
 </div>
 
@@ -25,11 +25,11 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 - Multiple ways to engage the path, and different endings for the path.
 - New stats to manage! It's not just about building friendship, but also raising Hana's trust and self-esteem.
 - Lots of words! ~~word count coming soon..ish..~~
-- Use of GLSL shaders to add cool effects!
+- Expansion on the original codebase (libraries, GLSL shaders, etc.) to add some immersive effects!
 - Open-source and community-driven! You are free to help.. please help..
 
 # Install 🪄
-- Coming soon! Please refer to the current status at the top of the page.
+- Coming when the mod is released... please refer to the current status at the top of the page.
 - You have two options to install:
   - Installer **(Suggested)**: Automatically create a new game copy with the mod or patch your existing.
   - Manual: Download the mod content and replace/move files yourself.
