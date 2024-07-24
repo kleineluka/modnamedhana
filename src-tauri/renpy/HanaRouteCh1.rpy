@@ -247,7 +247,7 @@ label HanaRouteCh1P1_Bones:
             Hana "I-I understand.. I'll keep them in my room, I pwomise!"
             pass 
         "Maybe some time you could show me your collection?": # stat boost
-            $ hanastats(1, 2, 1)
+            $ hana_stats(1, 2, 1)
             Player "Well.. maybe you could show me your collection sometime? I'm actually kind of curious!"
             "Hana's eyes light up at that and she nods excitedly."
             show ha 08 at charcenter
@@ -268,7 +268,7 @@ label HanaRouteCh1P1_Bones:
             "Hana looks taken aback by that, but not in a bad way. Just in a way that seems like nobody has ever been kind to her before."
             pass 
         "I guess people really thought you were a freak, huh?": # stat drop
-            $ hanastats(-1, -1, -2)
+            $ hana_stats(-1, -1, -2)
             Player "I guess people back on Earth really thought you were a freak, huh?"
             show ha 01 at charcenter
             with Dissolve(0.3)
@@ -283,6 +283,33 @@ label HanaRouteCh1P1_Bones:
 label HanaRouteCh1P1_Voice:
     $ persistent.hana_ch1_p1_knowhana_voice = True
     Player "So.. I couldn't help but notice that you have a really unique voice."
+    show ha 05 at charcenter
+    with Dissolve(0.3)
+    Hana "Y-yeah.. I've always had a weally high voice.. Most people on Earth said it was annoying.."
+    Hana "And then there's the fact that I have a st-stutter.. and kind of have a weird way of tawking.."
+    "I can't help but feel a little bad for her. She seems so.. self-conscious about it."
+    Player "Is it something that caused a lot of trouble for you on Earth?"
+    "Hana looked down and began fidgeting with the straps of her overalls."
+    Hana "It made it weally hard to make friends, so I was mostly by myself.."
+    Hana "I ended up spending a wot of time online where I didn't have to use my voice."
+    show ha 06 at charcenter
+    with Dissolve(0.3)
+    Hana "I can't control it.. and even hewe, where we awe supposed to be moving on, I still get self-concious."
+    # extra dialogue if not cis
+    if not_cisgender():
+        Player "I know how you feel.. even with my voice, I still get a little self-conscious."
+        Player "But beyond that, people judging you for something out of your control. It sucks."
+    Player "Is that why you wanted the big house to yourself? Not having to deal with or talk to others, right?"
+    "Hana gives a tiny nod, still having a hard time maintaining eye contact."
+    Hana "There isn't exactly a s-screen hewe to hide behind, after all.. so being awone is the next best thing."
+    menu:
+        "What do I think about Hana's voice?"
+        "I think it's kind of cute, actually.": # stat boost
+            pass 
+        "You shouldn't be so hard on yourself.": # neutral-ish
+            pass
+        "It sounds like nails on a chalkboard.": # stat drop
+            pass
     jump HanaRouteCh1P1_GetToKnowHana
 
 label HanaRouteCh1P1_Interests:

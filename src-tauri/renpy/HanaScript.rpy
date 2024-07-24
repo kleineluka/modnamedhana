@@ -23,8 +23,13 @@ init:
 init python:
     
     # function to change hana's stats
-    def hanastats(love_change, trust_change, confidence_change):
+    def hana_stats(love_change, trust_change, confidence_change):
         global halove, hatrust, haconfidence
         halove += love_change
         hatrust += trust_change
         haconfidence += confidence_change
+
+    # check if a user is not cisgender
+    def not_cisgender():
+        valid_genders = ["transfemale", "transmale", "nonbinary", "agender", "genderfluid", "genderqueer"]
+        return persistent.gender in valid_genders

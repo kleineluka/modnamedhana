@@ -26,6 +26,7 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 - New stats to manage! It's not just about building friendship, but also raising Hana's trust and self-esteem.
 - New sprites! I wouldn't go as far as to say "new art" because I just played around in Photoshop and I'm no artist..
 - Lots of words! ~~word count coming soon..ish..~~
+- Unique interactions based on your character (ex. gender)
 - Expansion on the original codebase (libraries, GLSL shaders, etc.) to add some immersive effects!
 - Open-source and community-driven! You are free to help.. please help..
 
