@@ -138,6 +138,7 @@ label HanaRouteCh1P1_CalmHana:
     jump HanaRouteCh1P1_Merge
 
 # Hana Route, Chapter 1, Part 1 - If the player insists on sharing the house
+# Branches to: Merge
 label HanaRouteCh1P1_InsistShare:
     # Reward this route with confidence
     $haconfidence += 1
@@ -148,12 +149,142 @@ label HanaRouteCh1P1_InsistShare:
     show ha 03 at hop2
     "She's starting to spiral, and I can't help but feel a little bad for pushing her so hard."
     "Not that I really pushed her that hard, but.. she seem's so fragile."
-    # Kalei looks anxious and I wonder if this girl might actually be holding him back from something important.
-    pass
+    # Show Kalei leaving if he was present
+    if hana_needed_kalei:
+        show k 08 at farleft
+        with Dissolve(0.3)
+        "Kalei is starting to look really anxious. I wonder if this girl might actually be holding him back from something important."
+        show k 01 at farleft
+        with Dissolve(0.3)
+        k "I truly do believe that it would be a great learning experience for you two to share the house!"
+        show k 24 at farleft
+        k "But, if you must excuse me, I really do need to get going right now..."
+        k "[Player], I trust you will take care of this, yeah?"
+        show k 24 at lefttooff
+        with ease
+        "Before I even get a chance to respond, Kalei is already out of my sight."
+    # This might look awkward if Kalei wasn't present, so additional logic might be needed
+    show ha 04 at charcenter
+    with ease
+    haq "Do you weally think it'll be fun to be w-woomies? I mean.. I've never had a woomie before.."
+    haq "Most people on Earth hated being awound me.."
+    "She looks like she's about to cry.. but hopefully I can reason with her."
+    show ha 05 at charcenter
+    Player "I think it could be! I mean, we're in Limbo, right? This is a fresh start for both of us."
+    "She looks up at me with the tiniest amount of hope I've seen in her so far."
+    show ha 09 at charcenter
+    with Dissolve(0.3)
+    haq "I.. I guess.. I could twy.."
+    haq "I'm not weally used to being around people.. {size=-10}not by my choice..{size=+10} but maybe it could be fun.."
+    Player "Exactly! Plus, it'll help having someone around while trying to get into Utopia."
+    Player "Solo-ing this whole thing might be a little too much, don't you think?"
+    "Hana gives a small nod and stays silent. I think this might be one of the first times she's thought about us being in the afterlife."
+    jump HanaRouteCh1P1_Merge
 
 # Hana Route, Chapter 1, Part 1 - Merge back after choosing what to do with Hana
+# Branches to: GetToKnowHana
 label HanaRouteCh1P1_Merge:
-    # Merge at the discussion of them in the Afterlife
-    # Mention bone collection and if player chooses to point it out to her, more trust
-    "Dummy Text"
-    pass
+    "If I'm going to be living with her, I should probably get to know her a little better."
+    Player "So, we should do some icebreakers or something now that we're living together!"
+    show ha 04 at charcenter
+    with Dissolve(0.3)
+    haq "Icebweakers? Like.. what?"
+    Player "Well, for starters, I'm [Player]. What's your name?"
+    haq "I'm Hana.."
+    "Ah, finally, a name to the face. Hana, huh?"
+    Player "Well it's nice to formally meet you, Hana."
+    # reset the persistent flags for getting to know Hana, for testing or going back to this point
+    $ persistent.hana_ch1_p1_knowhana_bones = False
+    $ persistent.hana_ch1_p1_knowhana_voice = False
+    $ persistent.hana_ch1_p1_knowhana_interests = False
+    jump HanaRouteCh1P1_GetToKnowHana
+
+# Hana Route, Chapter 1, Part 1 - Getting to know Hana
+label HanaRouteCh1P1_GetToKnowHana:
+    menu: 
+        "There's a lot of.. interesting quirks about Hana. Maybe I should ask her about them."
+        "You mentioned a bone collection?" if not persistent.hana_ch1_p1_knowhana_bones:
+            jump HanaRouteCh1P1_Bones
+        "You have a really unique voice." if not persistent.hana_ch1_p1_knowhana_voice:
+            jump HanaRouteCh1P1_Voice
+        "What did you enjoy back on Earth?" if not persistent.hana_ch1_p1_knowhana_interests:
+            jump HanaRouteCh1P1_Interests
+        "I think that's enough for now.":
+            pass
+
+label HanaRouteCh1P1_Bones:
+    $ persistent.hana_ch1_p1_knowhana_bones = True
+    Player "So.. you mentioned a bone collection? Like, animal bones?"
+    "{i}Please be animal bones...{/i}"
+    show ha 08 at charcenter
+    with Dissolve(0.3)
+    Hana "Y-yeah.. I've always had a thing for bones! Animal bones, I mean.."
+    Hana "It kinda started when my bird died and my dad taught me how debone it.. He had a wab and everything, so I got to wearn a lot!"
+    Hana "I made a wittle birdy necklace and I've been collecting bones ever since.."
+    Player "That's.. really interesting! I've never met someone who collected bones before."
+    Player "Should I be worried about you collecting my bones, too?"
+    "I try to say it as light-hearted as I could, but I really hope she doesn't take it the wrong way."
+    show ha 02 at charcenter
+    Hana "I would never take your bones! I mostly got them from a hunting store neawby.."
+    Hana "Although.."
+    show ha 11 at charcenter
+    Hana "There was one time I got some fwom woadkill on the side of the woad.. I just couldn't help myself!"
+    "I genuinely have no clue how to respond to that."
+    "I mean.. I guess it's.. good to have hobbies..?"
+    show ha 04 at charcenter
+    Hana "Eek! I hope that doesn't make me sound too cwazy.."
+    Player "N-no! Not at all! It's.. really unique, actually. Most people wouldn't have the guts to do that."
+    show ha 09 at charcenter
+    Hana "T-thank you.. Most people run away fwom me when I talk about bones.."
+    Hana "Or before I had the chance to talk about bones.."
+    Hana "But.. I'm weally glad you're still here. It's actually nice to be able to talk about it!"
+    menu:
+        "How do I move on to another topic?"
+        "Just.. keep them away from me, please.": # True neutral
+            Player "I'm glad just.. maybe keep them away from me, okay?"
+            Player "Anatomy stuff kind of freaks me out.."
+            "I hope she isn't too upset about that, but I really don't want to see any bones when I'm already dead."
+            Hana "I-I understand.. I'll keep them in my room, I pwomise!"
+            pass 
+        "Maybe some time you could show me your collection?": # stat boost
+            $ hanastats(1, 2, 1)
+            Player "Well.. maybe you could show me your collection sometime? I'm actually kind of curious!"
+            "Hana's eyes light up at that and she nods excitedly."
+            show ha 08 at charcenter
+            with Dissolve(0.3)
+            Hana "W-weally? You weally wanna see my collection?"
+            Hana "I mean, I've never shown anyone befowe.. but I think I could make an exception for you!"
+            Player "I'd be honored! But.. how have you even started a collection in Limbo?"
+            "Hana looks away, a little embarrassed. She shrugs and giggles."
+            Hana "I-I.. I guess I just found them.. I'm not suwe how it happened!"
+            Hana "I thought maybe it would be a good idea to twy and continue things I did on Earth.."
+            Hana "You know, to make this all seem.. a little less scawy.."
+            "That's actually pretty sound logic. I hope I'll have time to find some hobbies while here in Limbo.."
+            Player "Having something familiar would make this place a little less daunting."
+            "Hana looks the calmest she's been all day. Maybe sharing a house with her was the right call."
+            Hana "I'm weally glad you think so.. I think.. I think we could be good fwiends.."
+            Hana "I mean, if you want to be fwiends with me.."
+            Player "I'd really like that, Hana. And maybe we can even find some hobbies to do together while we're stuck here!"
+            "Hana looks taken aback by that, but not in a bad way. Just in a way that seems like nobody has ever been kind to her before."
+            pass 
+        "I guess people really thought you were a freak, huh?": # stat drop
+            $ hanastats(-1, -1, -2)
+            Player "I guess people back on Earth really thought you were a freak, huh?"
+            show ha 01 at charcenter
+            with Dissolve(0.3)
+            Hana "I-I.. I guess so.. a wot of people were weally mean to me.."
+            Player "I mean, you can't blame them, right? Collecting bones is a little.. out there."
+            Hana "I-I guess so.. I just.. I just thought it was something special that made me happy.."
+            Player "I'm sure it does! But.. maybe it's best to keep it to yourself for now, okay?"
+            "Hana looks down at the ground and nods. That was a little harsh, wasn't it?"
+            pass
+    jump HanaRouteCh1P1_GetToKnowHana
+
+label HanaRouteCh1P1_Voice:
+    $ persistent.hana_ch1_p1_knowhana_voice = True
+    Player "So.. I couldn't help but notice that you have a really unique voice."
+    jump HanaRouteCh1P1_GetToKnowHana
+
+label HanaRouteCh1P1_Interests:
+    $ persistent.hana_ch1_p1_knowhana_interests = True
+    jump HanaRouteCh1P1_GetToKnowHana

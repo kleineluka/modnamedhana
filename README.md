@@ -24,6 +24,7 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 - Play a fan-made path dedicated to ~~Annoying Girl~~ Hana!
 - Multiple ways to engage the path, and different endings for the path.
 - New stats to manage! It's not just about building friendship, but also raising Hana's trust and self-esteem.
+- New sprites! I wouldn't go as far as to say "new art" because I just played around in Photoshop and I'm no artist..
 - Lots of words! ~~word count coming soon..ish..~~
 - Expansion on the original codebase (libraries, GLSL shaders, etc.) to add some immersive effects!
 - Open-source and community-driven! You are free to help.. please help..
@@ -32,7 +33,7 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 - Coming when the mod is released... please refer to the current status at the top of the page.
 - You have two options to install:
   - Installer **(Suggested)**: Automatically create a new game copy with the mod or patch your existing.
-  - Manual: Download the mod content and replace/move files yourself.
+  - Manual: Download the mod content and replace/move files yourself. **You will need a method to patch the binary diff in the resource RPA file - this is so I didn't redistribute the entire game.**
 
 # Guides & FAQ 😖
 - Walk through coming when the mod is released!
@@ -49,7 +50,7 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 > You can find the [mod content in /src-tauri/renpy/](https://github.com/kleineluka/modnamedhana/tree/main/src-tauri/renpy)!
 
 ### Installer Development
-- [Rust](https://www.rust-lang.org/) is the back-end. Why? It's lightweight, cross-platform, and easily redistributable... ~~and I needed an excuse to learn it~~.
+- [Rust](https://www.rust-lang.org/) is the back-end. Why? It's lightweight, cross-platform, and easily redistributable... ~~and I needed an excuse to learn it~~. It also provides an easy and safe way to patch byte differences in the game's resource file (to add new sprites).
 - [Tauri](https://tauri.app/) is the front-end, for delivering an Electron experience without the bloat. This means that **Node** is the (other) package manager used here!
 
 > [!TIP]
@@ -60,7 +61,7 @@ A [Repurpose](https://residentrabbit.itch.io/repurpose) **fan-made** mod to add 
 
 # Credits & Licenses 🎉 
 - 🕹️ **Mod Named Hana** is licensed under the [MIT License](https://github.com/kleineluka/modnamedhana/blob/main/LICENSE).
-- 🕹️ **[Repurpose Studios](https://residentrabbit.itch.io/repurpose)** for creating the game, the character Hana, and assets for the game.
+- 🕹️ **[Repurpose Studios](https://residentrabbit.itch.io/repurpose)** for creating the game, the character Hana, and assets for the game (such as the emoji used here).
 - 💾 **[KleineLuka (Zoey)](https://www.github.com/kleineluka)** for creating Mod Named Hana's patch/installer. You can find me on Discord as `kleinezoey`!
 - ✏️ Your name could go here for writing or art.. which I cant do well.. ~~or at all~~.
 - 💾 **[Tauri](https://github.com/tauri-apps/tauri)**, the Rust-based front-end framework, is licensed under MIT/Apache.
