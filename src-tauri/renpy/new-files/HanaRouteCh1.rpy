@@ -200,6 +200,8 @@ label HanaRouteCh1P1_Merge:
     jump HanaRouteCh1P1_GetToKnowHana
 
 # Hana Route, Chapter 1, Part 1 - Getting to know Hana
+# Choices: Bones, Voice, Interests
+# Branches to: ...
 label HanaRouteCh1P1_GetToKnowHana:
     menu: 
         "There's a lot of.. interesting quirks about Hana. Maybe I should ask her about them."
@@ -211,7 +213,11 @@ label HanaRouteCh1P1_GetToKnowHana:
             jump HanaRouteCh1P1_Interests
         "I think that's enough for now.":
             pass
+    # All options were exhausted, or the user skipped ahead
+    "Time's really passed between sorting out the housing situation and getting to know Hana." 
+    "We should probably actually.. you know, go into the house now. Not that I have much to unpack or anything."
 
+# Looping Choice for HanaRouteCh1P1_GetToKnowHana (Bones)
 label HanaRouteCh1P1_Bones:
     $ persistent.hana_ch1_p1_knowhana_bones = True
     Player "So.. you mentioned a bone collection? Like, animal bones?"
@@ -225,8 +231,8 @@ label HanaRouteCh1P1_Bones:
     Player "Should I be worried about you collecting my bones, too?"
     "I try to say it as light-hearted as I could, but I really hope she doesn't take it the wrong way."
     show ha 02 at charcenter
-    Hana "I would never take your bones! I mostly got them from a hunting store neawby.."
-    Hana "Although.."
+    Hana "Auuuu! I would never take your bones! I mostly got them from a hunting store neawby.."
+    Hana "Although~"
     show ha 11 at charcenter
     Hana "There was one time I got some fwom woadkill on the side of the woad.. I just couldn't help myself!"
     "I genuinely have no clue how to respond to that."
@@ -252,7 +258,7 @@ label HanaRouteCh1P1_Bones:
             "Hana's eyes light up at that and she nods excitedly."
             show ha 08 at charcenter
             with Dissolve(0.3)
-            Hana "W-weally? You weally wanna see my collection?"
+            Hana "W-weally? Auauaua! You weally wanna see my collection?"
             Hana "I mean, I've never shown anyone befowe.. but I think I could make an exception for you!"
             Player "I'd be honored! But.. how have you even started a collection in Limbo?"
             "Hana looks away, a little embarrassed. She shrugs and giggles."
@@ -280,6 +286,7 @@ label HanaRouteCh1P1_Bones:
             pass
     jump HanaRouteCh1P1_GetToKnowHana
 
+# Looping Choice for HanaRouteCh1P1_GetToKnowHana (Voice)
 label HanaRouteCh1P1_Voice:
     $ persistent.hana_ch1_p1_knowhana_voice = True
     Player "So.. I couldn't help but notice that you have a really unique voice."
@@ -299,19 +306,51 @@ label HanaRouteCh1P1_Voice:
     if not_cisgender():
         Player "I know how you feel.. even with my voice, I still get a little self-conscious."
         Player "But beyond that, people judging you for something out of your control. It sucks."
+        Hana "Weally? B-but.. weh.. I can't imagine other people being mean to you.."
+    # merge back to the main conversation
     Player "Is that why you wanted the big house to yourself? Not having to deal with or talk to others, right?"
     "Hana gives a tiny nod, still having a hard time maintaining eye contact."
     Hana "There isn't exactly a s-screen hewe to hide behind, after all.. so being awone is the next best thing."
     menu:
         "What do I think about Hana's voice?"
         "I think it's kind of cute, actually.": # stat boost
+            $ hana_stats(1, 0, 2)
+            Player "I think it's cute, actually. It's.. unique, and I think that's kind of charming."
+            Hana "C-cute? I-I've never heard that befowe.. you're pwobably messing with me or just bein nice.."
+            Player "I'm being serious, silly! Why would I say something that I didn't mean?"
+            show ha 09 at charcenter
+            with Dissolve(0.3)
+            Player "Plus, if we're ever separated in a crowd, I'll be able to find you pretty easily!"
+            "Hana smiled at my little joke, but also seemed genuinely happy that someone liked her voice."
+            "She still seemed a bit guarded, but.. maybe with enough time and effort, she'll open up."
             pass 
         "You shouldn't be so hard on yourself.": # neutral-ish
+            $ hana_stats(0, 0, 1)
+            Player "You really shouldn't be so hard on yourself. Everybody was given their own voice, right?"
+            Player "We can try and change it to the best of our ability but sometimes it's best to just embrace what makes us, well, us."
+            show ha 05 at charcenter
+            with Dissolve(0.3)
+            Hana "My dad used to say something wike dat.. but.. it didn't stop people fwom making fun of me."
+            Hana "School was bwutal.. you know that thingie where people call on you to wead out loud?"
+            Hana "Every time we were weading out loud, I'd be shaking the whole time.."
+            Player "I'm sorry you had to put up with all of that, especially as a kid.. but things will be different in Limbo."
+            "Hana seems a little less doom and gloom about her voice, but still not entirely convinced."
             pass
         "It sounds like nails on a chalkboard.": # stat drop
+            $ hana_stats(-1, 0, -2)
+            Player "I'm not going to lie, it sounds like nails on a chalkboard. Like, super painful and annoying."
+            show ha 04 at charcenter
+            with Dissolve(0.3)
+            Hana "I-I.. I'm sowwy.. I can't help it.."
             pass
     jump HanaRouteCh1P1_GetToKnowHana
 
+# Looping Choice for HanaRouteCh1P1_GetToKnowHana (Interests)
 label HanaRouteCh1P1_Interests:
     $ persistent.hana_ch1_p1_knowhana_interests = True
+    Player "So.. what did you enjoy back on Earth? Any hobbies or interests?"
+    show ha 03 at charcenter
+    with Dissolve(0.3)
+    "Hana seems taken aback by the question, like she's never talked about her interests before."
+    Hana "Well.. I"
     jump HanaRouteCh1P1_GetToKnowHana
